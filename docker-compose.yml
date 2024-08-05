@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  jenkins:
+    image: jenkins/jenkins:lts
+    container_name: jenkins
+    ports:
+      - "8081:8080"
+    volumes:
+      - jenkins_home:/var/jenkins_home
+    networks:
+      - jenkins_network
+
+  tools:
+    image: cicd:latest
+    container_name: ci-cd
+    networks:
+      - jenkins_network
+    volumes:
+      - jenkins_home:/var/jenkins_home
+
+volumes:
+  jenkins_home:
+
+networks:
+  jenkins_network:
+    driver: bridge
