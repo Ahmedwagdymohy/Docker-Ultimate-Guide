@@ -3,41 +3,6 @@ The only source you need to learn and practice Docker, Dockerfile, Docker-Compos
 
 
 
-
-
-
-
-
-
-# Abstract 
-We have configured a full-pipeline with building and testing tools with specific versions,The Usage of DockerImages gonna ease the process of transfering this images to the server and run locally&on Cloud
-
-# Containarization_Of_Full_Pipeline
-1.  Building the First container from Jenkins Image
-2.  Building the tools container from Dockerfile 
-3.  Connecting the Two containers under the same network bridge
-
-
-
-
-(Format this Text)This arch. can have multiple containers as aslave for Jenkins,ex: We can have two container one running on Linux and one on Windows and Jenkins can interface the pipeline with both based on the commands we choose
-
-
-
-# Docker-compose-file
-serving Jenkins as a interfacing container and Ci/CD container as the tools we are goin to use
-
-To Build the Docker-compoe file: 
-```bash
-docker compose up -d
-```
-
----
-
-Here's a reorganized and polished version of the README file for Docker Volumes:
-
----
-
 # Docker Volumes
 
 ![Docker Volumes](image.png)
